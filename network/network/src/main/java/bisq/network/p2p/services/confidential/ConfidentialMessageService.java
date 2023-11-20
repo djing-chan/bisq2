@@ -272,7 +272,7 @@ public class ConfidentialMessageService implements Node.Listener, DataService.Li
                         }, DISPATCHER);
                         return true;
                     } catch (Exception e) {
-                        log.error("Error at decryption using receiversKeyPair={}", receiversKeyPair);
+                        log.error("Error at decryption using receiversKeyId={}", confidentialMessage.getReceiverKeyId());
                         log.error(ExceptionUtil.print(e));
                         throw new RuntimeException(e);
                     }
